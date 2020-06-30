@@ -5,9 +5,8 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   <%= favicon_link_tag asset_path('LogoIcon.svg') %>
-  <meta
-      name="description"
-      content="Developing Websites Making Dreams Come True"
-    />
+  <meta property="og:title" content="Developing Websites" />
+  <meta property="og:description" content="Making Dreams Come True">
+  <meta property="og:image" content='<%=asset_path('LogoIcon.svg')%>'/>
   <%= favicon_link_tag 'ProfileImg.svg', rel: 'apple-touch-icon', type: 'image/png'%>
 </head>

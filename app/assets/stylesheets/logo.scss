@@ -1,0 +1,17 @@
+.logo {
+  align-self: center;
+  display: flex;
+  height: 80%;
+  overflow: hidden;
+
+  img {
+    max-height: 100%;
+    width: auto;
+  }
+
+  .logo-text {
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+}

@@ -1,20 +1,49 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$sub-bg:rgba(255, 255, 255, 0.85);
+$sub-bg: rgba(255, 255, 255, .85);
+
+* {
+  box-sizing: border-box;
+}
 
 .container {
+  height: 100%;
+  left: 0;
   position: absolute;
   top: calc(100vh / 2);
-  left: 0;
-  height: 100%;
   width: 100%;
 }
 
 .sub-container {
-  width: 80%;
+  background-color: $sub-bg;
   height: calc(100vh / 2);
   margin-bottom: calc(100vh / 2);
-  background-color: $sub-bg;
   width: 100%;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+
+  .construction {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    >:first-child {
+      width: 60%;
+    }
+
+    img {
+      align-self: center;
+      height: auto;
+      width: 80%;
+    }
+  }
 }

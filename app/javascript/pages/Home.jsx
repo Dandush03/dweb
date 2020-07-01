@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 import Header from '../components/Header';
 import Paralax from '../components/Paralax';
+import ContactForm from '../components/ContactForm';
 
 export default class Home extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ export default class Home extends Component {
       <>
         <Header />
         <Paralax />
+        <ContactForm />
         <div className="container">
           <div className="sub-container" />
           <div className="sub-container" />

@@ -3,8 +3,13 @@ import React, { Component } from 'react';
 export default class ContactForm extends Component {
   constructor(props) {
     super(props);
-    this.state = { active: false };
+    this.state = {
+      active: false,
+      status: null,
+      statusMsg: null,
+    };
     this.handlerForm = this.handlerForm.bind(this);
+    this.handlerSubmit = this.handlerSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -14,6 +19,36 @@ export default class ContactForm extends Component {
     Object.keys(container).forEach((div) => {
       container[div].addEventListener('click', () => this.handlerForm());
     });
+  }
+
+  handlerSubmit(ev) {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    let validated = true;
+    [...data.values()].forEach((elem) => {
+      if (!elem) {
+        validated = false;
+      }
+    });
+    if (!validated) {
+      this.setState({ statusMsg: '**Todos los campos deben de ser llenados**', status: false });
+      return;
+    }
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        this.setState({ statusMsg: 'Su solicitud se envió satisfactoriamente', status: true });
+      } else {
+        this.setState({ statusMsg: 'Ocurrio un error, por favor intenté más tarde', status: false });
+      }
+    };
+
+    xhr.send(data);
   }
 
   handlerForm() {
@@ -27,9 +62,9 @@ export default class ContactForm extends Component {
   }
 
   render() {
-    const { state: { active } } = this;
+    const { state: { active, status, statusMsg }, handlerForm, handlerSubmit } = this;
     if (active) {
-      window.onclick = () => this.handlerForm();
+      window.onclick = () => handlerForm();
     } else {
       window.onclick = null;
     }
@@ -39,7 +74,8 @@ export default class ContactForm extends Component {
           <p>Contáctanos</p>
         </div>
         <div className="form-container">
-          <form action="" method="post">
+          <form action="/" method="post" onSubmit={handlerSubmit}>
+            <span className={`request ${status ? 'good' : 'bad'}`}>{statusMsg || null}</span>
             <button type="button" name="action">X</button>
             <h1>¿Necesitas una página web?</h1>
             <h2>No dudes en contactarnos, solo llena el siguiente formulario</h2>
@@ -52,7 +88,7 @@ export default class ContactForm extends Component {
               </label>
             </div>
             <label htmlFor="email">
-              <input type="text" name="email" placeholder="Correo" />
+              <input type="email" name="email" placeholder="Correo" />
             </label>
             <label htmlFor="phone">
               <input type="text" name="phone" placeholder="Numero de Telf" />

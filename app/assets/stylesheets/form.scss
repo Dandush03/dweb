@@ -10,6 +10,8 @@ $contact-form-color-1: rgba(0, 0, 0, 1);
 $contact-form-color-2: rgba(0, 0, 255, .5);
 $contact-form-bg: radial-gradient(circle, $contact-form-color-1 20%, $contact-form-color-2 100%);
 $form-container-bg: #f5f5f5;
+$error-msg-color: rgb(116, 0, 0);
+$success-msg-color: rgb(21, 184, 0);
 
 @font-face {
   font-family: 'Calisto MT';
@@ -30,6 +32,23 @@ $form-container-bg: #f5f5f5;
   top: 14vh;
   transition: all .7s ease;
   z-index: 1;
+
+  .request {
+    left: -9999px;
+    margin: auto;
+    position: absolute;
+    right: -9999px;
+    top: 35px;
+    width: fit-content;
+
+    &.bad {
+      color: $error-msg-color;
+    }
+
+    &.good {
+      color: $success-msg-color;
+    }
+  }
 
   .form-container {
     background-color: $form-container-bg;

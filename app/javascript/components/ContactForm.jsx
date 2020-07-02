@@ -74,7 +74,7 @@ export default class ContactForm extends Component {
           <p>Contáctanos</p>
         </div>
         <div className="form-container">
-          <form action="/" method="post" onSubmit={handlerSubmit}>
+          <form action="https://formspree.io/xoqkkqpn" method="POST" onSubmit={handlerSubmit}>
             <span className={`request ${status ? 'good' : 'bad'}`}>{statusMsg || null}</span>
             <button type="button" name="action">X</button>
             <h1>¿Necesitas una página web?</h1>

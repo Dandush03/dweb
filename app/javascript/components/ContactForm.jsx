@@ -42,9 +42,9 @@ export default class ContactForm extends Component {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
-        this.setState({ statusMsg: 'Su solicitud se envió satisfactoriamente', status: true });
+        this.setState({ statusMsg: 'Su solicitud se envió satisfactoriamente.', status: true });
       } else {
-        this.setState({ statusMsg: 'Ocurrio un error, por favor intenté más tarde', status: false });
+        this.setState({ statusMsg: 'Ocurrio un error, por favor intenté más tarde.', status: false });
       }
     };
 

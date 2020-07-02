@@ -32,7 +32,7 @@ $cover-bg: rgba(255, 255, 255, .274);
   }
 
   .cover {
-    background-color: $cover-bg;
+    // background-color: $cover-bg;
     height: 100vh;
     left: 0;
     position: fixed;
@@ -42,16 +42,15 @@ $cover-bg: rgba(255, 255, 255, .274);
   }
 
   .first {
-    background-image: image-url('paralax/paralax3.jpg');
+    background-image: image-url('paralax/paralax1.jpg');
   }
-
 
   .second {
     background-image: image-url('paralax/paralax2.jpg');
   }
 
   .third {
-    background-image: image-url('paralax/paralax1.jpg');
+    background-image: image-url('paralax/paralax3.jpg');
   }
 
   .fourth {

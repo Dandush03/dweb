@@ -7,7 +7,7 @@ $contact-form-bg: rgba(0, 0, 0, .9);
 $btn-color: #fff;
 $btn-gradient: linear-gradient(90deg, $btn-color-1 0%, $btn-color-2 100%);
 $contact-form-color-1: rgba(0, 0, 0, 1);
-$contact-form-color-2: rgba(60, 0, 255, .5);
+$contact-form-color-2: rgba(0, 0, 255, .5);
 $contact-form-bg: radial-gradient(circle, $contact-form-color-1 20%, $contact-form-color-2 100%);
 $form-container-bg: #f5f5f5;
 
@@ -17,14 +17,10 @@ $form-container-bg: #f5f5f5;
 }
 
 .contact-form {
-  background: $contact-form-bg;
-  border-radius: 10px;
   display: flex;
   font-family: 'Calisto MT';
-  height: 70vh;
   justify-content: center;
   left: 0;
-  margin: 5vw;
   max-height: 700px;
   max-width: 420px;
   min-height: 500px;
@@ -32,28 +28,29 @@ $form-container-bg: #f5f5f5;
   overflow: hidden;
   position: fixed;
   top: 14vh;
+  transition: all .7s ease;
   z-index: 1;
-
-  @media only screen and (max-width: 768px) {
-    max-width: 335px;
-    min-height: 600px;
-    position: absolute;
-  }
 
   .form-container {
     background-color: $form-container-bg;
     border-radius: 10px;
     display: flex;
+    height: 65vh;
     justify-content: center;
     margin: 20px;
     padding: 10px;
+    transition: all .8s ease;
     width: 100%;
+
+    @media only screen and (max-width: 768px) {
+      height: 530px;
+    }
   }
 
   form {
-    align-self: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     overflow: hidden;
     width: 100%;
   }
@@ -103,17 +100,107 @@ $form-container-bg: #f5f5f5;
     padding: 10px;
     resize: none;
     width: 100%;
+
+    @media only screen and (max-width: 768px) {
+      height: 100px;
+    }
   }
 
   button {
-    align-self: center;
+    cursor: pointer;
+    outline: 0;
+
+    &[type='submit'] {
+      align-self: center;
+      background: $btn-gradient;
+      border-radius: 5px;
+      color: $btn-color;
+      font-family: 'Calisto MT';
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 15px;
+      width: 150px;
+    }
+
+    &[type='button'] {
+      background: transparent;
+      border: 0;
+      font-family: cursive;
+      font-size: 1.5rem;
+      font-weight: bold;
+      position: absolute;
+      right: 25px;
+      top: 25px;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .close-form {
     background: $btn-gradient;
-    border-radius: 5px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     color: $btn-color;
-    font-family: 'Calisto MT';
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 15px;
-    width: 150px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    left: 0;
+    overflow: hidden;
+    padding: 10px;
+    position: fixed;
+    transition: height .25s, width 1s, padding .25s;
+    width: 110px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &.active {
+    background: $contact-form-bg;
+    border-radius: 10px;
+    height: 70vh;
+    margin: 5vw;
+    width: 100%;
+
+    .close-form {
+      height: 0;
+      margin: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      width: 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+      height: 570px;
+      max-height: 80vh;
+      max-width: 335px;
+      min-height: 540px;
+      overflow-y: auto;
+      top: 10vh;
+    }
+  }
+
+  &.close {
+    height: 50px;
+    margin: 0;
+    margin-top: 5vw;
+    min-height: 50px;
+    min-width: 100px;
+    width: 100px;
+
+
+    .form-container {
+      height: 0;
+      margin: 0;
+      opacity: 0;
+      overflow: hidden;
+      padding: 0;
+      width: 0;
+    }
   }
 }

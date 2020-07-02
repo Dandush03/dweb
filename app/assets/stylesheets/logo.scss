@@ -10,8 +10,30 @@
   }
 
   .logo-text {
-    @media only screen and (max-width: 767px) {
+    bottom: -9999px;
+    left: -9999px;
+    margin: auto;
+    position: absolute;
+    right: -9999px;
+    top: -9999px;
+  }
+
+
+  .logo-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .logo-text {
       display: none;
+    }
+
+    .logo-img {
+      display: none;
+    }
+
+    .logo-mobile {
+      display: unset;
     }
   }
 }

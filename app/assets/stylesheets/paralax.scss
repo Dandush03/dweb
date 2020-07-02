@@ -10,6 +10,9 @@ $cover-bg: rgba(255, 255, 255, .274);
   z-index: -1;
 
   div {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     height: 90vh;
     margin: 0;
     overflow: hidden;
@@ -36,5 +39,26 @@ $cover-bg: rgba(255, 255, 255, .274);
     top: 0;
     width: 100vw;
     z-index: 1;
+  }
+
+  .first {
+    background-image: image-url('paralax/paralax1.jpg');
+  }
+
+
+  .second {
+    background-image: image-url('paralax/paralax2.jpg');
+  }
+
+  .third {
+    background-image: image-url('paralax/paralax3.jpg');
+  }
+
+  .fourth {
+    background-image: image-url('paralax/paralax4.jpg');
+  }
+
+  .fifth {
+    background-image: image-url('paralax/paralax5.jpg');
   }
 }

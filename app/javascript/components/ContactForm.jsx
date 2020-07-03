@@ -70,7 +70,7 @@ export default class ContactForm extends Component {
     }
     return (
       <div className={`contact-form ${active ? 'active' : 'close'}`}>
-        <div className="close-form" name="action">
+        <div className="close-form" name="close-btn">
           <p>Contáctanos</p>
         </div>
         <div className="form-container">

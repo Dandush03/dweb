@@ -13,7 +13,7 @@ export default class ContactForm extends Component {
   }
 
   componentDidMount() {
-    const container = document.getElementsByName('action');
+    const container = document.getElementsByName('close-btn');
     const form = document.getElementsByClassName('contact-form')[0];
     form.addEventListener('click', (e) => e.stopPropagation());
     Object.keys(container).forEach((div) => {
@@ -76,7 +76,7 @@ export default class ContactForm extends Component {
         <div className="form-container">
           <form action="https://formspree.io/xoqkkqpn" method="POST" onSubmit={handlerSubmit}>
             <span className={`request ${status ? 'good' : 'bad'}`}>{statusMsg || null}</span>
-            <button type="button" name="action">X</button>
+            <button type="button" name="close-btn">X</button>
             <h1>¿Necesitas una página web?</h1>
             <h2>No dudes en contactarnos, solo llena el siguiente formulario</h2>
             <div className="name">

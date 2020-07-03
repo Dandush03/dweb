@@ -15,7 +15,9 @@ $success-msg-color: rgb(21, 184, 0);
 
 @font-face {
   font-family: 'Calisto MT';
-  src: url('./fonts/CalistoMT.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  src: font-url('./fonts/CalistoMT.ttf') format('truetype');
 }
 
 .contact-form {

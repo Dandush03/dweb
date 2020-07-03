@@ -18,22 +18,9 @@
     top: -9999px;
   }
 
-
-  .logo-mobile {
-    display: none;
-  }
-
   @media only screen and (max-width: 767px) {
     .logo-text {
       display: none;
-    }
-
-    .logo-img {
-      display: none;
-    }
-
-    .logo-mobile {
-      display: unset;
     }
   }
 }

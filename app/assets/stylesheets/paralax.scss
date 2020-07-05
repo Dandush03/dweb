@@ -10,56 +10,36 @@ $cover-bg: rgba(255, 255, 255, .274);
   z-index: -1;
 
   div {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
     margin: 0;
     min-height: 100vh;
     min-width: 100vw;
     overflow: hidden;
     padding: 0;
     position: relative;
+    z-index: -1;
 
-    &::before {
-      background-attachment: fixed;
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: auto;
-      content: '';
-      display: block;
-      left: 0;
-      min-height: 100%;
-      min-width: 100%;
-      position: absolute;
-      top: 0;
-      z-index: -1;
-    }
-  }
-
-  .first {
-    &::before {
-      background-image: image-url('paralax/paralax1.jpg');
+    @media only screen and (min-width: 767px) {
+      background-size: cover;
     }
   }
 
   .second {
-    &::before {
-      background-image: image-url('paralax/paralax2.jpg');
-    }
+    background-image: image-url('paralax/paralax2.jpg');
   }
 
   .third {
-    &::before {
-      background-image: image-url('paralax/paralax3.jpg');
-    }
+    background-image: image-url('paralax/paralax3.jpg');
   }
 
   .fourth {
-    &::before {
-      background-image: image-url('paralax/paralax4.jpg');
-    }
+    background-image: image-url('paralax/paralax4.jpg');
   }
 
   .fifth {
-    &::before {
-      background-image: image-url('paralax/paralax5.jpg');
-    }
+    background-image: image-url('paralax/paralax5.jpg');
   }
 }

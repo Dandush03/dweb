@@ -21,7 +21,7 @@ $cover-bg: rgba(255, 255, 255, .274);
       background-attachment: fixed;
       background-position: center center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: 100% auto;
       content: '';
       display: block;
       left: 0;

@@ -10,54 +10,56 @@ $cover-bg: rgba(255, 255, 255, .274);
   z-index: -1;
 
   div {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    height: 90vh;
     margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 100vw;
 
-    img {
-      height: 100%;
-      left: -9999px;
-      margin: auto;
+    &::before {
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      left: 0;
+      min-height: 100%;
       min-width: 100%;
       position: absolute;
-      right: -9999px;
       top: 0;
+      z-index: -1;
     }
   }
 
-  .cover {
-    // background-color: $cover-bg;
-    height: 100vh;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 1;
-  }
-
   .first {
-    background-image: image-url('paralax/paralax1.jpg');
+    &::before {
+      background-image: image-url('paralax/paralax1.jpg');
+    }
   }
 
   .second {
-    background-image: image-url('paralax/paralax2.jpg');
+    &::before {
+      background-image: image-url('paralax/paralax2.jpg');
+    }
   }
 
   .third {
-    background-image: image-url('paralax/paralax3.jpg');
+    &::before {
+      background-image: image-url('paralax/paralax3.jpg');
+    }
   }
 
   .fourth {
-    background-image: image-url('paralax/paralax4.jpg');
+    &::before {
+      background-image: image-url('paralax/paralax4.jpg');
+    }
   }
 
   .fifth {
-    background-image: image-url('paralax/paralax5.jpg');
+    &::before {
+      background-image: image-url('paralax/paralax5.jpg');
+    }
   }
 }

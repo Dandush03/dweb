@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../components/Header';
-import Paralax from '../components/Paralax';
+import Paralax from '../components/ParalaxContainer';
 import ContactForm from '../components/ContactForm';
 import Content1 from '../../assets/images/content/drawing.svg';
 

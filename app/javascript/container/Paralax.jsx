@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { addItem, itemLoaded } from '../actions/loadingItem';
@@ -31,14 +32,14 @@ class Parallax extends Component {
     img.src = imgUrl;
     img.onload = loadedItem;
 
+    const Div = styled.div`&:before {  background-image: url(${img.src}); } `;
+
     if (loadingData[loadItem] === undefined) {
       addItem({ [loadItem]: false });
     }
 
     return (
-      <div style={{ backgroundImage: `url(${img.src})` }}>
-        {/** */}
-      </div>
+      <Div />
     );
   }
 }

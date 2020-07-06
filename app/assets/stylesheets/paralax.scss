@@ -4,27 +4,32 @@ $cover-bg: rgba(255, 255, 255, .274);
   display: flex;
   flex-direction: column;
   left: 0;
-  overflow: hidden;
   position: absolute;
   width: 100%;
   z-index: -1;
 
   div {
-    background-attachment: fixed;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto;
     height: 100vh;
-    margin: 0;
-    min-width: 100vw;
-    overflow: hidden;
-    padding: 0;
-    position: relative;
-    z-index: -1;
+    width: 100%;
+
+    &::before {
+      background-attachment: fixed;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      content: '';
+      display: block;
+      height: 100vh;
+      left: 0;
+      margin: 0;
+      min-width: 100%;
+      padding: 0;
+      top: 0;
+      z-index: -1;
+    }
+
 
     @media only screen and (min-width: 767px) {
-      background-size: cover;
-      height: 100vh;
     }
   }
 }

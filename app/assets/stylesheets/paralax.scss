@@ -6,7 +6,6 @@ $cover-bg: rgba(255, 255, 255, .274);
   left: 0;
   overflow: hidden;
   position: absolute;
-  top: 10vh;
   width: 100%;
   z-index: -1;
 
@@ -17,14 +16,15 @@ $cover-bg: rgba(255, 255, 255, .274);
     background-size: auto;
     height: 100vh;
     margin: 0;
+    min-width: 100vw;
     overflow: hidden;
     padding: 0;
     position: relative;
-    width: 100vw;
     z-index: -1;
 
     @media only screen and (min-width: 767px) {
       background-size: cover;
+      height: 100vh;
     }
   }
 }

@@ -1,3 +1,0 @@
-export const ADD_LOADING_ITEM = 'ADD_LOADING_ITEM';
-export const ITEM_LOADED = 'ITEM_LOADED';
-export const RESET_LOADING = 'RESET_LOADING';

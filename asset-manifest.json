@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dweb/static/css/main.a623e8d1.chunk.css",
+    "main.js": "/dweb/static/js/main.3180e6f9.chunk.js",
+    "main.js.map": "/dweb/static/js/main.3180e6f9.chunk.js.map",
+    "runtime-main.js": "/dweb/static/js/runtime-main.263a457c.js",
+    "runtime-main.js.map": "/dweb/static/js/runtime-main.263a457c.js.map",
+    "static/js/2.79ecd751.chunk.js": "/dweb/static/js/2.79ecd751.chunk.js",
+    "static/js/2.79ecd751.chunk.js.map": "/dweb/static/js/2.79ecd751.chunk.js.map",
+    "index.html": "/dweb/index.html",
+    "precache-manifest.beddecbb30546f99dac29eb2e6d36533.js": "/dweb/precache-manifest.beddecbb30546f99dac29eb2e6d36533.js",
+    "service-worker.js": "/dweb/service-worker.js",
+    "static/css/main.a623e8d1.chunk.css.map": "/dweb/static/css/main.a623e8d1.chunk.css.map",
+    "static/js/2.79ecd751.chunk.js.LICENSE.txt": "/dweb/static/js/2.79ecd751.chunk.js.LICENSE.txt",
+    "static/media/Main.scss": "/dweb/static/media/Kalam-Regular.bea35746.ttf",
+    "static/media/logo.svg": "/dweb/static/media/logo.1dc29329.svg",
+    "static/media/person-navegating.png": "/dweb/static/media/person-navegating.fe2bdcf5.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.263a457c.js",
+    "static/js/2.79ecd751.chunk.js",
+    "static/css/main.a623e8d1.chunk.css",
+    "static/js/main.3180e6f9.chunk.js"
+  ]
+}

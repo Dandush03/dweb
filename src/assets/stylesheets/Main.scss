@@ -1,4 +1,5 @@
-@import './App';
+@import './Header';
+@import './Home';
 @import './Loading';
 
 :root {
@@ -17,4 +18,11 @@ body {
 
 main {
   height: var(--app-height);
+}
+
+@font-face {
+  font-family: 'Kalam';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Kalam-Regular'), url(./fonts/Kalam-Regular.ttf) format('truetype');
 }

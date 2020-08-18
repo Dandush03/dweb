@@ -1,52 +1,18 @@
-$wave-color: #015871;
-
 header {
-  .background {
-    background: $wave-color;
-    height: 5%;
-    left: 0;
+  height: 210px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+
+  .logo {
     position: absolute;
-    top: 0;
-    transform: rotate(180deg);
-    width: 100%;
-	}
+    width: 250px;
+    z-index: 1;
 
-  .wave {
-    animation: wave 7s cubic-bezier(.36, .45, .63, .53) infinite;
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg');
-    background-repeat: repeat-x;
-    background-size: 1600px 100px;
-    height: 100px;
-    position: absolute;
-    top: -100px;
-    transform: translate3d(0, 0, 0);
-    width: 6400px;
-
-    &.second {
-      animation: wave 7s cubic-bezier(.36, .45, .63, .53) -.125s infinite, swell 7s ease -1.25s infinite;
-      opacity: 1;
-      top: -77px;
-    }
-  }
-
-  @keyframes wave {
-    0% {
-      margin-left: 0;
-    }
-
-    100% {
-      margin-left: -1600px;
-    }
-  }
-
-  @keyframes swell {
-    0%,
-    100% {
-      transform: translate3d(0, -25px, 0);
-    }
-
-    50% {
-      transform: translate3d(0, 5px, 0);
+    .logo-svg {
+      width: 100%;
     }
   }
 }

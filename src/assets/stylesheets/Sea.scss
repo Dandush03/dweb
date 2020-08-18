@@ -1,0 +1,59 @@
+$wave-color: #decd87;
+
+.sea-container {
+  height: 210px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+
+  .sea {
+    background: $wave-color;
+    height: 5%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: rotate(180deg);
+    width: 100%;
+	}
+
+  .wave {
+    animation: wave 14s cubic-bezier(.36, .45, .63, .53) infinite;
+    background-image: url('../images/wave.svg'); // sass-lint:disable-line no-url-domains no-url-protocols
+    background-repeat: repeat-x;
+    background-size: 1600px 198px;
+    height: 198px;
+    position: absolute;
+    top: -198px;
+    transform: translate3d(0, 0, 0);
+    width: 6400px;
+
+    &.second {
+      animation: wave 14s cubic-bezier(.36, .45, .63, .53) -.125s infinite, swell 14s ease -1.25s infinite;
+      opacity: 1;
+      top: -175px;
+    }
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translate3d(0, -25px, 0);
+    }
+
+    50% {
+      transform: translate3d(0, 5px, 0);
+    }
+  }
+}

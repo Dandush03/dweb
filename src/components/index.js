@@ -1,7 +1,8 @@
 import Loading from './Loading';
-import Header from './Header';
+import Sea from './Sea';
 import Footer from './Footer';
+import Header from './Header';
 
 export {
-  Loading, Header, Footer
+  Loading, Sea, Footer, Header
 };

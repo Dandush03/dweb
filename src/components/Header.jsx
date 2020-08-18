@@ -1,12 +1,19 @@
 import React from 'react';
 
+// Containers
+import Img from '../containers/Img'
+
+// Assets
+
+import logo from '../assets/images/logo.svg'
+import Sea from './Sea';
 export default function Header() {
   return (
     <header>
-        <div className="background">
-          <div className="wave first"></div>
-          <div className="wave second"></div>
-        </div>
+      <Sea />
+      <div className="logo">
+        <Img imgUrl={logo} imgAlt="Company Logo" imgClass="logo-svg" />
+      </div>
     </header>
   );
 }

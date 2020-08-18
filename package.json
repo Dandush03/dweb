@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "root": "build/",
-  "homepage": "https://dandush03.github.io/dweb/",
+  "homepage": "http://dandush03.github.io/dweb",
   "routes": {
     "/**": "index.html"
   },

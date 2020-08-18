@@ -25,11 +25,11 @@ $content-c: rgb(79, 99, 189);
       left: -9925px;
       margin: auto;
       max-height: 100%;
-      min-width: 100%;
       position: absolute;
       right: -9999px;
-      rotate: -40deg;
       top: -9875px;
+      transform: rotate(-40deg);
+      width: 700px;
       z-index: 1;
     }
 
@@ -42,8 +42,8 @@ $content-c: rgb(79, 99, 189);
       overflow: hidden;
       position: absolute;
       right: -9999px;
-      rotate: 23.5deg;
       top: -9875px;
+      transform: rotate(23.5deg);
       width: 500px;
       z-index: 0;
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from '../assets/images/logo.svg';
 
 // Components
 import { Img } from '../containers';

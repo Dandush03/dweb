@@ -1,0 +1,54 @@
+$quote-c: #000;
+
+.home {
+  position: relative;
+
+  .background {
+    max-height: var(--app-height);
+    max-width: 50%;
+    padding-bottom: var(--app-height);
+    padding-left: 100%;
+    position: absolute;
+    z-index: -1;
+
+    img {
+      left: 0;
+      margin: auto;
+      max-height: 100%;
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: flex-end;
+    width: 50%;
+  }
+
+  .quote {
+    color: $quote-c;
+    font-family: Kalam;
+    font-size: x-large;
+    margin: 0;
+    padding: 0;
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      border: 1px solid $quote-c;
+      content: '';
+      left: 0;
+      position: absolute;
+      top: 15px;
+      width: 30px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
